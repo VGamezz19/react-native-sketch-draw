@@ -1,0 +1,38 @@
+{
+  "name": "react-native-sketch-view",
+  "version": "2.0.0",
+  "description": "A React Native (v0.53) component for touch based drawing supporting iOS and Android.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VGamezz19/react-native-sketch-draw.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-native0.53",
+    "ios",
+    "android",
+    "touch",
+    "sketch",
+    "draw"
+  ],
+  "author": {
+    "name": "Victor Gamez",
+    "email": "victor.gamez1596@gmail.com",
+    "url": "https://github.com/VGamezz19"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VGamezz19/react-native-sketch-draw/issues"
+  },
+  "homepage": "https://github.com/VGamezz19/react-native-sketch-draw#readme",
+  
+  "peerDependencies": {
+    "react-native": ">=0.42.0",
+    "prop-types": "^15.6.0"
+  }
+}
