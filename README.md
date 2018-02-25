@@ -12,7 +12,7 @@ This component was written to fulfill the following use cases:
 
 You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
 
-![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/overview.png)
+![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/newpicture.png)
 
 ## Getting Started
 
