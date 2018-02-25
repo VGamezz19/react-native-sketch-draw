@@ -10,17 +10,17 @@ This component was written to fulfill the following use cases:
 2. Shouldn't include any UI Elements for interaction. The UI Elements can be created and customized in react native.
 3. Support touch drawing, erasing of part of drawing, clearing drawing, saving of drawn images locally and opening of locally saved images.
 
-## Getting Started
-
-1. `$ npm install react-native-sketch-view --save` or `$ yarn add react-native-sketch-view`
-2. `$ react-native link react-native-sketch-view`
-3. For iOS, open your application in Xcode.
-    1. Drag `SketchDrawContainer.xib` into your application project.
-    2. Click on Copy Bundle Resources and add `SketchDrawContainer.xib`.
-
 You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
 
 ![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/overview.png)
+
+## Getting Started
+
+1. `$ npm install react-native-sketch-draw --save` or `$ yarn add react-native-sketch-draw`
+2. `$ react-native link react-native-sketch-draw`
+3. For iOS, open your application in Xcode.
+    1. Drag `SketchDrawContainer.xib` into your application project.
+    2. Click on Copy Bundle Resources and add `SketchDrawContainer.xib`.
 
 ## Usage
 
