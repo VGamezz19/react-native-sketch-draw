@@ -4,7 +4,7 @@ For ReactNative v0.53
 
 You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
 
-![IMG](https://github.com/VGamezz19/react-native-sketch-draw/tree/master/public/overview.png)
+![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/overview.png)
 
 A React Native component for touch based drawing supporting iOS and Android. Inspired by the libraries [react-native-sketch](https://github.com/jgrancher/react-native-sketch), [react-native-signature-capture](https://github.com/RepairShopr/react-native-signature-capture) and [react-native-sketch-view](https://github.com/keshavkaul/react-native-sketch-view)
 
