@@ -15,8 +15,8 @@ This component was written to fulfill the following use cases:
 1. `$ npm install react-native-sketch-view --save` or `$ yarn add react-native-sketch-view`
 2. `$ react-native link react-native-sketch-view`
 3. For iOS, open your application in Xcode.
-    1. Drag `SketchViewContainer.xib` into your application project.
-    2. Click on Copy Bundle Resources and add `SketchViewContainer.xib`.
+    1. Drag `SketchDrawContainer.xib` into your application project.
+    2. Click on Copy Bundle Resources and add `SketchDrawContainer.xib`.
 
 You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
 
@@ -31,21 +31,21 @@ import {
     Text,
     TouchableHighlight
 } from 'react-native';
-import SketchView from 'react-native-sketch-view';
+import SketchDraw from 'react-native-sketch-draw';
 
-const sketchViewConstants = SketchView.constants;
+const SketchDrawConstants = SketchDraw.constants;
 
 const tools = {};
 
-tools[sketchViewConstants.toolType.pen.id] = {
-    id: sketchViewConstants.toolType.pen.id,
-    name: sketchViewConstants.toolType.pen.name,
-    nextId: sketchViewConstants.toolType.eraser.id
+tools[SketchDrawConstants.toolType.pen.id] = {
+    id: SketchDrawConstants.toolType.pen.id,
+    name: SketchDrawConstants.toolType.pen.name,
+    nextId: SketchDrawConstants.toolType.eraser.id
 };
-tools[sketchViewConstants.toolType.eraser.id] = {
-    id: sketchViewConstants.toolType.eraser.id,
-    name: sketchViewConstants.toolType.eraser.name,
-    nextId: sketchViewConstants.toolType.pen.id
+tools[SketchDrawConstants.toolType.eraser.id] = {
+    id: SketchDrawConstants.toolType.eraser.id,
+    name: SketchDrawConstants.toolType.eraser.name,
+    nextId: SketchDrawConstants.toolType.pen.id
 };
 
 export default class DrawBoard extends Component {
@@ -54,12 +54,12 @@ export default class DrawBoard extends Component {
         super(props);
         this.state = {
             color: '#FFFFFF',
-            toolSelected: sketchViewConstants.toolType.pen.id
+            toolSelected: SketchDrawConstants.toolType.pen.id
         };
     }
 
     isEraserToolSelected() {
-        return this.state.toolSelected === sketchViewConstants.toolType.eraser.id;
+        return this.state.toolSelected === SketchDrawConstants.toolType.eraser.id;
     }
 
     toolChangeClick() {
@@ -77,7 +77,7 @@ export default class DrawBoard extends Component {
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
-                <SketchView style={{flex: 1, backgroundColor: 'white'}} ref="sketchRef"
+                <SketchDraw style={{flex: 1, backgroundColor: 'white'}} ref="sketchRef"
                 selectedTool={this.state.toolSelected} 
                 toolColor={'#FFFA38'} //Yelow Example! you can changIT!
                 onSaveSketch={this.onSketchSave.bind(this)}
@@ -108,12 +108,12 @@ export default class DrawBoard extends Component {
 1. `clearSketch()` - Clears the view.
 2. `saveSketch()` - Initiates saving of sketch.
 3. `changeTool(toolId)` - Changes selected tool.
-    * Tool Id can be found using SketchView tooltype constants eg. `SketchView.constants.toolType.pen.id`
+    * Tool Id can be found using SketchDraw tooltype constants eg. `SketchDraw.constants.toolType.pen.id`
 
 #### Tool Types
 
-1. Pen - `SketchView.constants.toolType.pen`
-2. Eraser - `SketchView.constants.toolType.eraser`
+1. Pen - `SketchDraw.constants.toolType.pen`
+2. Eraser - `SketchDraw.constants.toolType.eraser`
 
 ### Props
 
