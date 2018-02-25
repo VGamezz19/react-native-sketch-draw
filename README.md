@@ -1,14 +1,11 @@
 # react-native-sketch-draw
 
-For ReactNative v0.53
-
-You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
-
-![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/overview.png)
+## For ReactNative v0.53
 
 A React Native component for touch based drawing supporting iOS and Android. Inspired by the libraries [react-native-sketch](https://github.com/jgrancher/react-native-sketch), [react-native-signature-capture](https://github.com/RepairShopr/react-native-signature-capture) and [react-native-sketch-view](https://github.com/keshavkaul/react-native-sketch-view)
 
 This component was written to fulfill the following use cases:
+
 1. Basic Touch based drawing for both iOS and android.
 2. Shouldn't include any UI Elements for interaction. The UI Elements can be created and customized in react native.
 3. Support touch drawing, erasing of part of drawing, clearing drawing, saving of drawn images locally and opening of locally saved images.
@@ -21,7 +18,12 @@ This component was written to fulfill the following use cases:
     1. Drag `SketchViewContainer.xib` into your application project.
     2. Click on Copy Bundle Resources and add `SketchViewContainer.xib`.
 
+You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
+
+![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/overview.png)
+
 ## Usage
+
 ```javascript
 import React, { Component } from 'react';
 import {
@@ -75,12 +77,12 @@ export default class DrawBoard extends Component {
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
-                <SketchView style={{flex: 1, backgroundColor: 'white'}} ref="sketchRef" 
+                <SketchView style={{flex: 1, backgroundColor: 'white'}} ref="sketchRef"
                 selectedTool={this.state.toolSelected} 
                 toolColor={'#FFFA38'} //Yelow Example! you can changIT!
                 onSaveSketch={this.onSketchSave.bind(this)}
                 localSourceImagePath={this.props.localSourceImagePath}/>
-				
+
                 <View style={{ flexDirection: 'row', backgroundColor: '#EEE'}}>
                     <TouchableHighlight underlayColor={"#CCC"} style={{ flex: 1, alignItems: 'center', paddingVertical:20 }} onPress={() => { this.refs.sketchRef.clearSketch() }}>
                         <Text style={{color:'#888',fontWeight:'600'}}>CLEAR</Text>
@@ -89,7 +91,8 @@ export default class DrawBoard extends Component {
                         <Text style={{color:'#888',fontWeight:'600'}}>SAVE</Text>
                     </TouchableHighlight>
                     <TouchableHighlight underlayColor={"#CCC"} style={{ flex: 1, justifyContent:'center', alignItems: 'center', backgroundColor:this.isEraserToolSelected() ? "#CCC" : "rgba(0,0,0,0)" }} onPress={this.toolChangeClick.bind(this)}>
-						<Text style={{color:'#888',fontWeight:'600'}}>ERASER</Text>
+
+                    <Text style={{color:'#888',fontWeight:'600'}}>ERASER</Text>
                     </TouchableHighlight>
                 </View>
             </View>
@@ -97,13 +100,16 @@ export default class DrawBoard extends Component {
     }
 }
 ```
+
 ## APIs and Props
 
 ### APIs
+
 1. `clearSketch()` - Clears the view.
 2. `saveSketch()` - Initiates saving of sketch.
 3. `changeTool(toolId)` - Changes selected tool.
-	* Tool Id can be found using SketchView tooltype constants eg. `SketchView.constants.toolType.pen.id`
+    * Tool Id can be found using SketchView tooltype constants eg. `SketchView.constants.toolType.pen.id`
+
 #### Tool Types
 
 1. Pen - `SketchView.constants.toolType.pen`
@@ -113,12 +119,12 @@ export default class DrawBoard extends Component {
 
 1. `selectedTool` - Set the tool id to be selected.
 2. `toolColor` - Set color for pen, using CSS colors.
-2. `localSourceImagePath` - Local file path of the image.
-3. `onSaveSketch(saveArgs)` - Callback when saving is complete.
-	* `saveArgs` Is an object having the following properties -
-		* `localFilePath` - Local file path of the saved image.
-		* `imageWidth` - Width of the saved image.
-		* `imageHeight` - Height of the saved image.
+3. `localSourceImagePath` - Local file path of the image.
+4. `onSaveSketch(saveArgs)` - Callback when saving is complete.
+    * `saveArgs` Is an object having the following properties -
+        * `localFilePath` - Local file path of the saved image.
+        * `imageWidth` - Width of the saved image.
+        * `imageHeight` - Height of the saved image.
 
 ## License
 
