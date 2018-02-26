@@ -12,8 +12,7 @@ This component was written to fulfill the following use cases:
 
 You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
 
-![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/newpicture.png)
-
+![Imgur](https://i.imgur.com/K2tCYNR.png)
 ## Getting Started
 
 1. `$ npm install react-native-sketch-draw --save` or `$ yarn add react-native-sketch-draw`
@@ -23,7 +22,7 @@ You can change color with prop `toolColor={'#color-CSS-Hexa'}`.
     1. Drag `SketchDrawContainer.xib` into your application project.
     2. Click on Copy Bundle Resources and add `SketchDrawContainer.xib`.
 
-![IMG](https://github.com/VGamezz19/react-native-sketch-draw/blob/master/public/Copy-Bundle-Resources.png)
+![Imgur](https://i.imgur.com/g2uJ9s8.png)
 
 ## Usage
 
