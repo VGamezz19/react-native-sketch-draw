@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { 
-  requireNativeComponent, 
+import {
+  requireNativeComponent,
   View,
   UIManager,
   findNodeHandle,
@@ -57,7 +57,7 @@ class SketchView extends Component {
   clearSketch() {
     UIManager.dispatchViewManagerCommand(
       findNodeHandle(this),
-      UIManager.RNSketchView.Commands.clearSketch,
+      UIManager.getViewManagerConfig('RNSketchView').Commands.clearSketch,
       [],
     );
   }
@@ -65,7 +65,7 @@ class SketchView extends Component {
   saveSketch() {
     UIManager.dispatchViewManagerCommand(
       findNodeHandle(this),
-      UIManager.RNSketchView.Commands.saveSketch,
+      UIManager.getViewManagerConfig('RNSketchView').Commands.saveSketch,
       [],
     );
   }
@@ -73,7 +73,7 @@ class SketchView extends Component {
   changeTool(toolId) {
     UIManager.dispatchViewManagerCommand(
       findNodeHandle(this),
-      UIManager.RNSketchView.Commands.changeTool,
+      UIManager.getViewManagerConfig('RNSketchView').changeTool,
       [toolId],
     );
   }
