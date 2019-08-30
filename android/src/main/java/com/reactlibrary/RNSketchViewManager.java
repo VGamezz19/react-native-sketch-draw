@@ -2,7 +2,7 @@
 package com.reactlibrary;
 
 import android.graphics.Color;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 import com.facebook.infer.annotation.Assertions;
